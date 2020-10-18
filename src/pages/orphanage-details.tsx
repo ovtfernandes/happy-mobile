@@ -9,8 +9,6 @@ import mapMarkerImg from '../images/map-marker.png';
 
 import api from '../services/api';
 
-const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
-
 interface OrphanageDetailsRouteParams {
     id: number;
 }
@@ -63,7 +61,7 @@ export default function OrphanageDetails() {
             <Image
               key={image.id}
               style={styles.image}
-              source={{ uri: `${apiBaseUrl}${image.url}` }}
+              source={{ uri: `http://192.168.0.172:3333${image.url}` }}
             />
           ))}
         </ScrollView>
